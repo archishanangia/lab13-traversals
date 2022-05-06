@@ -125,7 +125,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
 		{
 			return;
 		}
-		System.out.println(node.data);
+		System.out.print(node.data + " ");
 		preOrderRecurse(node.leftChild);
 		preOrderRecurse(node.rightChild);
 	}
@@ -139,7 +139,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
 		while (!pre.isEmpty())
 		{
 			current = pre.peek();
-			System.out.println(current);
+			System.out.print(current + " ");
 			pre.pop();
 			
 			if (current.rightChild != null)
@@ -256,19 +256,21 @@ public class BinarySearchTree<T extends Comparable<T>> {
 		bst.insert(3);
 		System.out.println(bst);
 	
-//		System.out.println("In Order Traversals");
-//		bst.inOrder();
-//		System.out.println();
-//		bst.inOrderStack();
-//		System.out.println();
+		System.out.println("In Order Traversals");
+		bst.inOrder();
+		System.out.println();
+		bst.inOrderStack();
+		System.out.println();
 		System.out.println("Pre Order Traversals");
+		bst.preOrder();
+		System.out.println();
 		bst.preOrderStack();
 		System.out.println();
-//		System.out.println("Post Order Traversals");
-//		bst.postOrder();
-//		System.out.println();
-//		bst.postOrderStack();
-//		
+		System.out.println("Post Order Traversals");
+		bst.postOrder();
+		System.out.println();
+		bst.postOrderStack();
+		
 	
 		
 	}
