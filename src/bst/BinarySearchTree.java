@@ -204,8 +204,16 @@ public class BinarySearchTree<T extends Comparable<T>> {
 		System.out.println("PostOrder test commit");
 	}
 	
-	public void postOrderRecurse(BSTNode<T> node) {
+	public void postOrderRecurse(BSTNode<T> node) 
+	{
+		if(node == null)
+		{
+			return;	
+		}
 		
+		postOrderRecurse(node.leftChild);
+		postOrderRecurse(node.rightChild);
+		System.out.println(node.data + " ");
 	}
 	
 	//Traverse the tree in an postorder fashion uses Stacks. 
